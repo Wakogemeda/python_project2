@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1>Crash Course for anyone</h1>
+    <div class="row">
+        {% for course in course %}
+        <div class="col">
+            <div class="card" style="width: 36rem;">
+                <img class="card-img-top" src="{{ course.image_url }}" alt="knowledge is a wisdom">
+                <div class="card-body">
+                    <h5 class="card-title">{{ course.name }}</h5>
+                    <p class="card-text">${{ course.price }}</p>
+                    <a href="https://www.edx.org/learn/big-data" class="btn btn-primary"> Register </a>
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
